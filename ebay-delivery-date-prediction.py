@@ -12,9 +12,26 @@ except FileNotFoundError:
     exit(1)  # Exit script if dataset is not found
 
 # Preprocess data
-# Assume 'seller_packaging_time', 'transit_time', and 'delivery_date' are columns in your dataset
-X = data[['seller_packaging_time', 'transit_time']]  # Features
-y = data['delivery_date']  # Target variable
+# Ensure these columns exist in your dataset
+try:
+    # Check if columns exist
+    required_columns = ['seller_packaging_time', 'transit_time', 'delivery_date']
+    for col in required_columns:
+        if col not in data.columns:
+            raise KeyError(f"Column '{col}' not found in dataset")
+    
+    # Convert columns to numeric, forcing errors to NaN (which will be handled next)
+    data[required_columns] = data[required_columns].apply(pd.to_numeric, errors='coerce')
+
+    # Drop rows with NaN values (non-numeric entries)
+    data = data.dropna(subset=required_columns)
+    
+    # Extract features and target variable
+    X = data[['seller_packaging_time', 'transit_time']]  # Features
+    y = data['delivery_date']  # Target variable
+except KeyError as e:
+    print(f"Column not found in dataset: {e}")
+    exit(1)
 
 # Split data into training and testing sets
 try:
@@ -41,5 +58,6 @@ try:
     new_data = pd.DataFrame({'seller_packaging_time': [2.5], 'transit_time': [1.8]})
     predicted_delivery_date = model.predict(new_data)
     print(f"Predicted Delivery Date: {predicted_delivery_date[0]} days")
-except (ValueError, TypeError):
+except (ValueError, TypeError) as e:
+    print(f"Error during model training or prediction: {e}")
     print("Ensure that your dataset has appropriate columns and the RandomForestRegressor parameters are correctly set.")
