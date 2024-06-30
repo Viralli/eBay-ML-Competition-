@@ -1,5 +1,5 @@
-Code Snippet: Example Implementation - Codes mentioned in the files: ebay-delivery-date-prediction.py       
-                                                                     dataset.csv
+Running the Code(Code Implementation Procedure) - There are two files required to get the outputs: Codes mentioned in the files: ebay-delivery-date-prediction.py       
+                                                                                                                                 dataset.csv
 
 Commands to run the Program files:
 
@@ -11,7 +11,7 @@ Open an online Python compiler that has the scikit-learn library installed/avail
 Create a python file with name: ebay-delivery-date-prediction.py and copy paste and use the code from the file mentioned in the Github: ebay-delivery-date-prediction.py
 Create another file to load data with name : dataset.csv  and copy paste and use the code from the file mentioned in the Github: dataset.csv
 
-Then run the Python file(ebay-delivery-date-prediction.py) in the Python Compiler, it will automatically process data from dataset.csv
+Then run the Python file(ebay-delivery-date-prediction.py) in the Python Compiler, it will automatically process data from dataset.csv and we will get the output
 
 2. In the Command Prompt/Terminal:
 
