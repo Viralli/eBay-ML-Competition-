@@ -47,4 +47,10 @@ Future Enhancements
     Continuous Integration and Continuous Deployment (CI/CD): Implement CI/CD pipelines to automate the deployment process. This includes automated testing, version control, and deployment to production environments, 
     ensuring rapid and reliable updates.
 
-Code Implementation(Running the Codes) - Codes mentioned in the files :ebay-delivery-date-prediction.py and dataset.csv
+On Basis of the above content, I have designed a Python code which demonstrates a practical implementation of a machine learning model to 
+predict delivery dates for items sold on eBay. 
+
+I have mentioned the codes in the following files: ebay-delivery-date-prediction.py
+                                                          dataset.csv
+
+I have provided the explanation of the codes, how did i practically implement it, in a separate file named: Code Explanation
