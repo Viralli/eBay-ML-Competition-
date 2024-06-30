@@ -36,11 +36,8 @@ Output:
 Screenshot of the Output is attached in README.md file
 
 
-Troubleshooting Tips
-File Paths: Ensure both HelloWorld.py and dataset.csv are in the same directory or adjust the file path (pd.read_csv('dataset.csv')) in your script if they are located in different directories.
+Troubleshooting Steps:
 
-Python Installation: If python HelloWorld.py doesn't work, try python3 HelloWorld.py or py HelloWorld.py depending on your Python installation.
-
-Dependencies: Ensure you have installed necessary Python libraries like pandas and scikit-learn (pip install pandas scikit-learn) if they are not already installed.
-
-By following these steps, you should be able to run your Python script (HelloWorld.py) and process data from dataset.csv to perform machine learning tasks as intended.
+Ensure Correct Data Types: Verify all values in dataset.csv are numeric and there are no missing values.
+Check File Path: Make sure the script and the dataset are in the same directory, or provide the correct file path to pd.read_csv('dataset.csv').
+Remove Non-Numeric Values: Ensure there are no non-numeric values or headers beyond the first row.
