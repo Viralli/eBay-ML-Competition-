@@ -39,8 +39,7 @@ Predicted Delivery Date: 1.72 days
 
 Troubleshooting Steps:
 
-Ensure Correct Data Types: Verify all values in dataset.csv are numeric and there are no missing values.
-Check File Path: Make sure the script and the dataset are in the same directory, or provide the correct file path to pd.read_csv('dataset.csv').
+Ensure Correct Data Types: Verify all values in `dataset.csv` are numeric and there are no missing values.
+Check File Path: Make sure the script and the dataset are in the same directory, or provide the correct file path to 
+`pd.read_csv('dataset.csv')`.
 Remove Non-Numeric Values: Ensure there are no non-numeric values or headers beyond the first row.
-
-
