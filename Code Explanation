@@ -3,7 +3,7 @@ Code Explanation
 The provided Python code demonstrates a practical implementation of a Random Forest Regressor machine learning model to predict 
 delivery dates for items sold on eBay. Here's a breakdown of how the code works:
 
-Code Explanation
+Code Explanation(ebay-delivery-date-prediction.py)
 
   1. Import Necessary Libraries:
 
@@ -76,6 +76,49 @@ except (ValueError, TypeError) as e:
 The RandomForestRegressor model is trained on the training set, and its performance is evaluated using the Mean Absolute Error
 (MAE). An example prediction is made for new data.
 
-By integrating the above code into the eBay ML Competition project, I have demonstrated a practical implementation of the 
+Code Explanation(dataset.csv)
+
+The data in the `dataset.csv` file represents a simplified dataset containing essential variables related to item delivery 
+logistics. It includes three columns: `seller_packaging_time`, `transit_time`, and `delivery_date`. 
+Here's an explanation of each column:
+
+seller_packaging_time: This column denotes the time taken by the seller to package the item for shipping. It includes 
+the duration from order confirmation to the item being ready for shipment.
+
+transit_time: This column indicates the time taken for the item to transit from the seller to the buyer. It includes 
+shipping time and any additional transit durations.
+
+delivery_date: This column specifies the delivery date of the item to the buyer. It is represented as a categorical 
+label (1 or 2 in this example), which likely denotes different delivery schedules or categories.
+
+Example Data Explanation:
+
+Row 1:
+
+   `seller_packaging_time`: 2.0 units (e.g., hours)
+   `transit_time`: 1.5 units (e.g., days)
+   `delivery_date`: 1 (indicating delivery on a specific schedule/category)
+Row 2:
+
+  `seller_packaging_time`: 3.2 units
+  `transit_time`: 2.1 units
+  `delivery_date`: 2 (indicating delivery on a different schedule/category)
+Row 3:
+
+  `seller_packaging_time`: 1.8 units
+  `transit_time`: 1.2 units
+  `delivery_date`: 1 (similar to Row 1)
+Row 4:
+
+  `seller_packaging_time`: 2.5 units
+  `transit_time`: 1.8 units
+  `delivery_date`: 2 (similar to Row 2)
+
+Each row in this dataset represents a unique transaction or item delivery scenario, where the columns `seller_packaging_time`
+and `transit_time` influence the `delivery_date` prediction model. The goal of the machine learning model is to predict the 
+`delivery_date` based on these input features (`seller_packaging_time` and `transit_time`), leveraging historical data to improve 
+accuracy and efficiency in delivery estimations.
+
+By integrating the above codes into the eBay ML Competition project, I have demonstrated a practical implementation of the 
 machine learning model(Random Forest Regressor) for predicting delivery dates. This showcases my ability to handle large-scale 
 datasets and apply machine learning techniques effectively. 
